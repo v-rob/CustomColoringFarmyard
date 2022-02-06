@@ -10,19 +10,24 @@ import android.graphics.RectF;
  * @version 1/31/2022
  */
 public class DrawableRectangle extends Drawable {
+    /**
+     * Creates a new rectangular Drawable.
+     *
+     * @param name The name to give this rectangle.
+     * @param color The initial color of the rectangle.
+     * @param rect The bounds of the rectangle to draw.
+     */
     public DrawableRectangle(String name, int color, RectF rect) {
         super(name, color, rect);
     }
 
+    /**
+     * Draws the rectangle to the screen.
+     *
+     * @param canvas The Canvas to be drawn to.
+     */
     @Override
     public void onDraw(Canvas canvas) {
         canvas.drawRect(getRect(), getPaint());
-    }
-
-    @Override
-    public boolean isPointInside(float x, float y) {
-        RectF rect = getRect();
-        return x >= rect.left && x <= rect.right &&
-                y >= rect.top && y <= rect.bottom;
     }
 }

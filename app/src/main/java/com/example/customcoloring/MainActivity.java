@@ -15,6 +15,11 @@ import android.widget.TextView;
  * @version 1/31/2022
  */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * Binds all event listeners for all elements when they're all created.
+     *
+     * @param savedInstanceState I have no idea and have no use for it.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
